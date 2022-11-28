@@ -98,11 +98,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   	initLED();
   	SCH_Init();
-    SCH_Add_Task(task1, 0, 50);
-    SCH_Add_Task(task2, 0, 100);
-    SCH_Add_Task(task3, 0, 150);
-	SCH_Add_Task(task4, 0, 200);
-    SCH_Add_Task(task5, 0, 250);
+    SCH_Add_Task(task1, 0, 500);
+    SCH_Add_Task(task2, 0, 1000);
+    SCH_Add_Task(task3, 0, 1500);
+	SCH_Add_Task(task4, 0, 2000);
+	// one shot task
+    SCH_Add_Task(task5, 1000, 0);
   while (1)
   {
 	  SCH_Dispatch_Tasks();
